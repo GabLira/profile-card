@@ -1,0 +1,21 @@
+@import "mixins";
+@import "variables";
+@import "components/main";
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 18px;
+  font-family: 'Fredoka', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: $quarters-color;
+}

@@ -1,0 +1,124 @@
+.container {
+  @include flx-ctr;
+  width: 100%;
+
+  .card__user {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    background-clip: padding-box;
+    width: 300px;
+    padding: 3em;
+    border-radius: 15px;
+    border: 3px solid transparent;
+    background: linear-gradient(135deg,
+            rgb(46 110 124 / 35%),
+            rgb(74 115 111 / 10%) 10%,
+            $primary-color-dark 17%, $primary-color 100%);
+
+    &:after {
+      content: "";
+      display: block;
+      top: -3px;
+      left: -3px;
+      bottom: -3px;
+      right: -3px;
+      z-index: -1;
+      position: absolute;
+      border-radius: 15px;
+      background: linear-gradient(135deg,
+              $quarters-color-dark,
+              $quarters-color 20%,
+              $quarters-color-light 30%,
+              $quarters-text-light 100%);
+    }
+
+    &--image {
+      display: block;
+      overflow: hidden;
+      margin: 0 auto;
+      border-radius: 100px;
+      width: 160px;
+      height: 160px;
+
+      .user__image {
+        position: relative;
+        width: 215px;
+        display: block;
+        margin: 0 auto;
+        bottom: 50px;
+      }
+    }
+
+    &--name {
+      text-align: center;
+      font-size: 1.4rem;
+      margin-top: 25px;
+      font-weight: 700;
+      color: $primary-color-light;
+    }
+
+    &--handle {
+      text-align: center;
+      position: relative;
+      bottom: 30px;
+      color: $tertiary-color-dark;
+    }
+
+    &--action {
+      @include dp-flx;
+      @include card__user--action;
+      border: 0;
+      padding: 2px;
+      height: 45px;
+      line-height: 1;
+
+      .btn__follow {
+        border: none;
+        border-radius: 20px;
+        background: linear-gradient(135deg, $secondary-color-dark, $secondary-color);
+        padding: 0 1.375em;
+        height: 40px;
+        color: $secondary-text-color;
+        font-weight: 700;
+        letter-spacing: .4px;
+      }
+
+      .btn__action {
+        background: none;
+        cursor: pointer;
+        height: 46px;
+        width: 46px;
+        border-radius: 25px;
+        border: 3px solid $tertiary-color;
+        color: $tertiary-color-dark;
+
+        i {
+          font-size: 1.25em;
+        }
+
+        &:hover, &:focus {
+          border-color: $tertiary-color-dark;
+        }
+      }
+    }
+    &--links {
+      @include card__user--action;
+      margin-top: 30px;
+      gap: 15px;
+
+      .link__icon {
+        text-decoration: none;
+        color: $tertiary-color-dark;
+        margin-left: 7px;
+        margin-right: 7px;
+
+        i {
+          @extend i;
+        }
+      }
+    }
+  }
+}
+

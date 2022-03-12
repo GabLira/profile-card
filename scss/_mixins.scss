@@ -1,0 +1,18 @@
+//funciones
+
+@mixin dp-flx($flx: flex, $ctr: center) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flx-ctr($flx: flex, $ctr: center) {
+  display: flex;
+  justify-content: center;
+}
+
+@mixin card__user--action {
+  cursor: pointer;
+  background-color: transparent;
+  gap: 10px;
+  transition: 0.15s ease;
+}

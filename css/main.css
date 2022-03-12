@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.container .card__user {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  background-clip: padding-box;
+  width: 300px;
+  padding: 3em;
+  border-radius: 15px;
+  border: 3px solid transparent;
+  background: linear-gradient(135deg, rgba(46, 110, 124, 0.35), rgba(74, 115, 111, 0.1) 10%, #1b2028 17%, #1b2228 100%);
+}
+.container .card__user:after {
+  content: "";
+  display: block;
+  top: -3px;
+  left: -3px;
+  bottom: -3px;
+  right: -3px;
+  z-index: -1;
+  position: absolute;
+  border-radius: 15px;
+  background: linear-gradient(135deg, #6fb2c5, #425e64 20%, #1b2028 30%, #2c333e 100%);
+}
+.container .card__user--image {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 100px;
+  width: 160px;
+  height: 160px;
+}
+.container .card__user--image .user__image {
+  position: relative;
+  width: 215px;
+  display: block;
+  margin: 0 auto;
+  bottom: 50px;
+}
+.container .card__user--name {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 25px;
+  font-weight: 700;
+  color: #efebe9;
+}
+.container .card__user--handle {
+  text-align: center;
+  position: relative;
+  bottom: 30px;
+  color: #7d8396;
+}
+.container .card__user--action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: transparent;
+  gap: 10px;
+  transition: 0.15s ease;
+  border: 0;
+  padding: 2px;
+  height: 45px;
+  line-height: 1;
+}
+.container .card__user--action .btn__follow {
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #5587ff, #3772ff);
+  padding: 0 1.375em;
+  height: 40px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+.container .card__user--action .btn__action {
+  background: none;
+  cursor: pointer;
+  height: 46px;
+  width: 46px;
+  border-radius: 25px;
+  border: 3px solid #343945;
+  color: #7d8396;
+}
+.container .card__user--action .btn__action i {
+  font-size: 1.25em;
+}
+.container .card__user--action .btn__action:hover, .container .card__user--action .btn__action:focus {
+  border-color: #7d8396;
+}
+.container .card__user--links {
+  cursor: pointer;
+  background-color: transparent;
+  gap: 10px;
+  transition: 0.15s ease;
+  margin-top: 30px;
+  gap: 15px;
+}
+.container .card__user--links .link__icon {
+  text-decoration: none;
+  color: #7d8396;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 18px;
+  font-family: "Fredoka", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  background-color: #425e64;
+}
+
+/*# sourceMappingURL=main.css.map */
