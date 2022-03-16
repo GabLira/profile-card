@@ -12,10 +12,11 @@
     padding: 3em;
     border-radius: 15px;
     border: 3px solid transparent;
-    background: linear-gradient(135deg,
-            rgb(46 110 124 / 35%),
-            rgb(74 115 111 / 10%) 10%,
-            $primary-color-dark 17%, $primary-color 100%);
+    background-color: $primary-color-dark;
+    background-image: linear-gradient(135deg,
+            rgb(46 110 124 / 80%),
+            rgb(119 190 217 / 16%) 10%,
+            $primary-color-dark 17%, $primary-color-dark 100%);
 
     &:after {
       content: "";
@@ -27,7 +28,7 @@
       z-index: -1;
       position: absolute;
       border-radius: 15px;
-      background: linear-gradient(135deg,
+      background-image: linear-gradient(135deg,
               $quarters-color-dark,
               $quarters-color 20%,
               $quarters-color-light 30%,
@@ -76,13 +77,16 @@
 
       .btn__follow {
         border: none;
+        cursor: pointer;
         border-radius: 20px;
-        background: linear-gradient(135deg, $secondary-color-dark, $secondary-color);
         padding: 0 1.375em;
         height: 40px;
-        color: $secondary-text-color;
         font-weight: 700;
         letter-spacing: .4px;
+        font-size: .8rem;
+        color: $secondary-text-color;
+        background: linear-gradient(135deg,
+                $secondary-color-dark, $secondary-color);
       }
 
       .btn__action {
@@ -95,7 +99,7 @@
         color: $tertiary-color-dark;
 
         i {
-          font-size: 1.25em;
+          font-size: 1rem;
         }
 
         &:hover, &:focus {
@@ -103,6 +107,7 @@
         }
       }
     }
+
     &--links {
       @include card__user--action;
       margin-top: 30px;

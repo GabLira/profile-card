@@ -6,12 +6,10 @@ const execute = () => {
     const buildCar = async () => {
         try {
             let response = await fetch('./data-user.json')
-            console.log(response)
             const result = await response.json();
-            console.log(result)
             container.innerHTML += buildCardTPL(result);
         } catch (e) {
-            console.log('HUBO UN FALLO');
+            console.log('The promise failed');
         }
     };
 
